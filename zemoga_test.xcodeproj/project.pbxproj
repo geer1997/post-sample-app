@@ -12,10 +12,20 @@
 		F311F434284DA798005D4A62 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */; };
 		F311F437284DA7BB005D4A62 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */; };
 		F311F438284DA7BB005D4A62 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */; };
+		F311F43E284E372F005D4A62 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F311F43D284E372F005D4A62 /* PostDetailViewController.xib */; };
+		F311F440284E373A005D4A62 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F43F284E373A005D4A62 /* PostDetailViewController.swift */; };
 		F3265EE9284D913000BFA3B5 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EE8284D913000BFA3B5 /* PostListViewModel.swift */; };
 		F3265EEB284D913F00BFA3B5 /* PostListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EEA284D913F00BFA3B5 /* PostListViewModelProtocol.swift */; };
 		F3265EEE284D928B00BFA3B5 /* PostListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EED284D928B00BFA3B5 /* PostListViewControllerProtocol.swift */; };
 		F3265F04284D9B5900BFA3B5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265F03284D9B5900BFA3B5 /* PostService.swift */; };
+		F32BFB53284E50D400F2EC7E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB52284E50D400F2EC7E /* UserService.swift */; };
+		F32BFB5D284E598200F2EC7E /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB5C284E598200F2EC7E /* PostDetailViewModel.swift */; };
+		F32BFB5F284E598E00F2EC7E /* PostDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB5E284E598E00F2EC7E /* PostDetailViewModelProtocol.swift */; };
+		F32BFB61284E5A0600F2EC7E /* PostDetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB60284E5A0600F2EC7E /* PostDetailViewControllerProtocol.swift */; };
+		F32BFB66284E5E5500F2EC7E /* Comment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB64284E5E5500F2EC7E /* Comment+CoreDataClass.swift */; };
+		F32BFB67284E5E5500F2EC7E /* Comment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB65284E5E5500F2EC7E /* Comment+CoreDataProperties.swift */; };
+		F32BFB6B284E6BAD00F2EC7E /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32BFB6A284E6BAD00F2EC7E /* CommentViewCell.xib */; };
+		F32BFB6D284E6BB700F2EC7E /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BFB6C284E6BB700F2EC7E /* CommentViewCell.swift */; };
 		F3B2093E284D486A003A41C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2093D284D486A003A41C1 /* AppDelegate.swift */; };
 		F3B20940284D486A003A41C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2093F284D486A003A41C1 /* SceneDelegate.swift */; };
 		F3B20948284D486A003A41C1 /* zemoga_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B20946284D486A003A41C1 /* zemoga_test.xcdatamodeld */; };
@@ -36,10 +46,20 @@
 		F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F311F43D284E372F005D4A62 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		F311F43F284E373A005D4A62 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		F3265EE8284D913000BFA3B5 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		F3265EEA284D913F00BFA3B5 /* PostListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelProtocol.swift; sourceTree = "<group>"; };
 		F3265EED284D928B00BFA3B5 /* PostListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		F3265F03284D9B5900BFA3B5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F32BFB52284E50D400F2EC7E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F32BFB5C284E598200F2EC7E /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		F32BFB5E284E598E00F2EC7E /* PostDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		F32BFB60284E5A0600F2EC7E /* PostDetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F32BFB64284E5E5500F2EC7E /* Comment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F32BFB65284E5E5500F2EC7E /* Comment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F32BFB6A284E6BAD00F2EC7E /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
+		F32BFB6C284E6BB700F2EC7E /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
 		F3B2093A284D486A003A41C1 /* zemoga_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zemoga_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B2093D284D486A003A41C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B2093F284D486A003A41C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +103,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F311F43A284E3701005D4A62 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F32BFB68284E6B9100F2EC7E /* Components */,
+				F311F43C284E3713005D4A62 /* ViewModel */,
+				F311F43B284E370E005D4A62 /* View */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		F311F43B284E370E005D4A62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F311F43D284E372F005D4A62 /* PostDetailViewController.xib */,
+				F311F43F284E373A005D4A62 /* PostDetailViewController.swift */,
+				F32BFB60284E5A0600F2EC7E /* PostDetailViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F311F43C284E3713005D4A62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F32BFB5C284E598200F2EC7E /* PostDetailViewModel.swift */,
+				F32BFB5E284E598E00F2EC7E /* PostDetailViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F3265EE7284D910C00BFA3B5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +162,31 @@
 		F3265EFA284D99C000BFA3B5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F32BFB64284E5E5500F2EC7E /* Comment+CoreDataClass.swift */,
+				F32BFB65284E5E5500F2EC7E /* Comment+CoreDataProperties.swift */,
 				F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */,
 				F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */,
 				F311F431284DA798005D4A62 /* Post+CoreDataClass.swift */,
 				F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F32BFB68284E6B9100F2EC7E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F32BFB69284E6B9D00F2EC7E /* CommentViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F32BFB69284E6B9D00F2EC7E /* CommentViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F32BFB6A284E6BAD00F2EC7E /* CommentViewCell.xib */,
+				F32BFB6C284E6BB700F2EC7E /* CommentViewCell.swift */,
+			);
+			path = CommentViewCell;
 			sourceTree = "<group>";
 		};
 		F3B20931284D4869003A41C1 = {
@@ -168,6 +236,7 @@
 			children = (
 				F3B20956284D4A15003A41C1 /* APIService.swift */,
 				F3265F03284D9B5900BFA3B5 /* PostService.swift */,
+				F32BFB52284E50D400F2EC7E /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -175,6 +244,7 @@
 		F3B20958284D50A4003A41C1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F311F43A284E3701005D4A62 /* PostDetail */,
 				F3B20959284D50AA003A41C1 /* PostList */,
 			);
 			path = Modules;
@@ -269,6 +339,8 @@
 			files = (
 				F3B2095F284D5596003A41C1 /* Posts.storyboard in Resources */,
 				F3B2094D284D486B003A41C1 /* LaunchScreen.storyboard in Resources */,
+				F32BFB6B284E6BAD00F2EC7E /* CommentViewCell.xib in Resources */,
+				F311F43E284E372F005D4A62 /* PostDetailViewController.xib in Resources */,
 				F3B20965284D873A003A41C1 /* PostListViewCell.xib in Resources */,
 				F3B2094A284D486B003A41C1 /* Assets.xcassets in Resources */,
 			);
@@ -323,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32BFB5F284E598E00F2EC7E /* PostDetailViewModelProtocol.swift in Sources */,
 				F3265EE9284D913000BFA3B5 /* PostListViewModel.swift in Sources */,
 				F3B20957284D4A15003A41C1 /* APIService.swift in Sources */,
 				F3265EEB284D913F00BFA3B5 /* PostListViewModelProtocol.swift in Sources */,
@@ -330,13 +403,20 @@
 				F3265EEE284D928B00BFA3B5 /* PostListViewControllerProtocol.swift in Sources */,
 				F311F433284DA798005D4A62 /* Post+CoreDataClass.swift in Sources */,
 				F311F434284DA798005D4A62 /* Post+CoreDataProperties.swift in Sources */,
+				F311F440284E373A005D4A62 /* PostDetailViewController.swift in Sources */,
+				F32BFB66284E5E5500F2EC7E /* Comment+CoreDataClass.swift in Sources */,
 				F3B2093E284D486A003A41C1 /* AppDelegate.swift in Sources */,
 				F3B20948284D486A003A41C1 /* zemoga_test.xcdatamodeld in Sources */,
+				F32BFB6D284E6BB700F2EC7E /* CommentViewCell.swift in Sources */,
 				F3B2095B284D50BF003A41C1 /* PostListViewController.swift in Sources */,
+				F32BFB67284E5E5500F2EC7E /* Comment+CoreDataProperties.swift in Sources */,
+				F32BFB61284E5A0600F2EC7E /* PostDetailViewControllerProtocol.swift in Sources */,
 				F311F438284DA7BB005D4A62 /* User+CoreDataProperties.swift in Sources */,
+				F32BFB53284E50D400F2EC7E /* UserService.swift in Sources */,
 				F3265F04284D9B5900BFA3B5 /* PostService.swift in Sources */,
 				F3B20967284D8744003A41C1 /* PostListViewCell.swift in Sources */,
 				F3B20940284D486A003A41C1 /* SceneDelegate.swift in Sources */,
+				F32BFB5D284E598200F2EC7E /* PostDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ class PostService {
             
             data.forEach { post in
                 guard
-                    let postBuild = self.buildPostFromDictionary(post) as? Post
+                    let postBuild = self.buildPostFromDictionary(post)
                 else {
                     return
                 }
@@ -37,7 +37,7 @@ class PostService {
     
     func deleteAllPosts(completion: @escaping (Bool, Error?) -> ()) {
         APIService.request(url: "https://jsonplaceholder.typicode.com/posts", method: .delete, completion: {(response, error)  in
-            print("===> response data", response)
+
             guard
                 error == nil
             else {
@@ -49,7 +49,7 @@ class PostService {
         })
     }
     
-    private func buildPostFromDictionary(_ dictionary: [String: Any]) -> Any? {
+    private func buildPostFromDictionary(_ dictionary: [String: Any]) -> Post? {
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         let json = JSON(dictionary)
@@ -57,7 +57,10 @@ class PostService {
 
         managedContext.performAndWait {
 
-            guard let idInt = json["id"].int16 else {
+            guard
+                let idInt = json["id"].int16,
+                let userId = json["userId"].int16
+            else {
                 return
             }
 
@@ -66,6 +69,7 @@ class PostService {
             post?.id = idInt
             post?.body = json["body"].string
             post?.title = json["title"].string
+            post?.userId = userId
 
             do {
                 try managedContext.save()
@@ -75,5 +79,63 @@ class PostService {
         }
 
         return post
+    }
+    
+    func getPostComments(_ postId: Int, completion: @escaping ([Comment], Error?) -> ()) {
+        APIService.request(url: "https://jsonplaceholder.typicode.com/posts/\(postId)/comments", method: .get, completion: {(response, error)  in
+            guard
+                let data = response as? [[String : Any]],
+                error == nil
+            else {
+                completion([], error)
+                return
+            }
+            
+            var comments: [Comment] = []
+            
+            data.forEach { comment in
+                guard
+                    let commentBuild = self.buildCommentFromDictionary(comment)
+                else {
+                    return
+                }
+                comments.append(commentBuild)
+            }
+            
+            completion(comments, nil)
+        })
+    }
+    
+    private func buildCommentFromDictionary(_ dictionary: [String: Any]) -> Comment? {
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let json = JSON(dictionary)
+        var comment: Comment?
+
+        managedContext.performAndWait {
+
+            guard
+                let idInt = json["id"].int16,
+                let postId = json["postId"].int16
+            else {
+                return
+            }
+
+            comment = Comment(context: managedContext)
+
+            comment?.id = idInt
+            comment?.postId = postId
+            comment?.name = json["name"].string
+            comment?.email = json["email"].string
+            comment?.body = json["body"].string
+
+            do {
+                try managedContext.save()
+            } catch {
+                print("===> Error creating post")
+            }
+        }
+
+        return comment
     }
 }

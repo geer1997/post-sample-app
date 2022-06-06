@@ -75,11 +75,22 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("no cell for this index path")
         }
         
-        cell.preparePostListCell(post.body ?? "")
+        cell.preparePostListCell(post.title ?? "")
 
         cell.layoutIfNeeded()
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard
+            let post = posts?[indexPath.row]
+        else { return }
+        let postDetailController = PostDetailViewController()
+        
+        postDetailController.preparePostDetail(post: post)
+        
+        self.navigationController?.pushViewController(postDetailController, animated: true)
     }
 }
 

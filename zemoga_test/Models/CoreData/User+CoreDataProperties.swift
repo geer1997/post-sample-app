@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  zemoga_test
 //
-//  Created by Germano Rojas on 5/6/22.
+//  Created by Germano Rojas on 6/6/22.
 //
 //
 
@@ -17,6 +17,12 @@ extension User {
     }
 
     @NSManaged public var id: Int16
+    @NSManaged public var name: String?
+    @NSManaged public var username: String?
+    @NSManaged public var email: String?
+    @NSManaged public var phone: String?
+    @NSManaged public var website: String?
+    @NSManaged public var post: Post?
 
 }
 
