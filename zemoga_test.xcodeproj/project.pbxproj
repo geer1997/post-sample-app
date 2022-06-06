@@ -7,25 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2746A7494BDFB94920CF58F /* Pods_zemoga_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8957373D86316AF0AFAC2C1F /* Pods_zemoga_test.framework */; };
+		F311F433284DA798005D4A62 /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F431284DA798005D4A62 /* Post+CoreDataClass.swift */; };
+		F311F434284DA798005D4A62 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */; };
+		F311F437284DA7BB005D4A62 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */; };
+		F311F438284DA7BB005D4A62 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */; };
+		F3265EE9284D913000BFA3B5 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EE8284D913000BFA3B5 /* PostListViewModel.swift */; };
+		F3265EEB284D913F00BFA3B5 /* PostListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EEA284D913F00BFA3B5 /* PostListViewModelProtocol.swift */; };
+		F3265EEE284D928B00BFA3B5 /* PostListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265EED284D928B00BFA3B5 /* PostListViewControllerProtocol.swift */; };
+		F3265F04284D9B5900BFA3B5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3265F03284D9B5900BFA3B5 /* PostService.swift */; };
 		F3B2093E284D486A003A41C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2093D284D486A003A41C1 /* AppDelegate.swift */; };
 		F3B20940284D486A003A41C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2093F284D486A003A41C1 /* SceneDelegate.swift */; };
-		F3B20942284D486A003A41C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B20941284D486A003A41C1 /* ViewController.swift */; };
-		F3B20945284D486A003A41C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B20943284D486A003A41C1 /* Main.storyboard */; };
 		F3B20948284D486A003A41C1 /* zemoga_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B20946284D486A003A41C1 /* zemoga_test.xcdatamodeld */; };
 		F3B2094A284D486B003A41C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B20949284D486B003A41C1 /* Assets.xcassets */; };
 		F3B2094D284D486B003A41C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B2094B284D486B003A41C1 /* LaunchScreen.storyboard */; };
+		F3B20957284D4A15003A41C1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B20956284D4A15003A41C1 /* APIService.swift */; };
+		F3B2095B284D50BF003A41C1 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2095A284D50BF003A41C1 /* PostListViewController.swift */; };
+		F3B2095F284D5596003A41C1 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B2095E284D5596003A41C1 /* Posts.storyboard */; };
+		F3B20965284D873A003A41C1 /* PostListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3B20964284D873A003A41C1 /* PostListViewCell.xib */; };
+		F3B20967284D8744003A41C1 /* PostListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B20966284D8744003A41C1 /* PostListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8957373D86316AF0AFAC2C1F /* Pods_zemoga_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zemoga_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85BEFF7A3C788B5930CCA12 /* Pods-zemoga_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga_test.release.xcconfig"; path = "Target Support Files/Pods-zemoga_test/Pods-zemoga_test.release.xcconfig"; sourceTree = "<group>"; };
+		E1705F84692D211A9149D898 /* Pods-zemoga_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga_test.debug.xcconfig"; path = "Target Support Files/Pods-zemoga_test/Pods-zemoga_test.debug.xcconfig"; sourceTree = "<group>"; };
+		F311F431284DA798005D4A62 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F3265EE8284D913000BFA3B5 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		F3265EEA284D913F00BFA3B5 /* PostListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelProtocol.swift; sourceTree = "<group>"; };
+		F3265EED284D928B00BFA3B5 /* PostListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F3265F03284D9B5900BFA3B5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		F3B2093A284D486A003A41C1 /* zemoga_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zemoga_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B2093D284D486A003A41C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B2093F284D486A003A41C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3B20941284D486A003A41C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F3B20944284D486A003A41C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3B20947284D486A003A41C1 /* zemoga_test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zemoga_test.xcdatamodel; sourceTree = "<group>"; };
 		F3B20949284D486B003A41C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B2094C284D486B003A41C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3B2094E284D486B003A41C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B20956284D4A15003A41C1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F3B2095A284D50BF003A41C1 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		F3B2095E284D5596003A41C1 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
+		F3B20964284D873A003A41C1 /* PostListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewCell.xib; sourceTree = "<group>"; };
+		F3B20966284D8744003A41C1 /* PostListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +59,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2746A7494BDFB94920CF58F /* Pods_zemoga_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF96F1A6B1675271353F435 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1705F84692D211A9149D898 /* Pods-zemoga_test.debug.xcconfig */,
+				D85BEFF7A3C788B5930CCA12 /* Pods-zemoga_test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6AAA23C13C7F19D896A1ACD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8957373D86316AF0AFAC2C1F /* Pods_zemoga_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3265EE7284D910C00BFA3B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3265EE8284D913000BFA3B5 /* PostListViewModel.swift */,
+				F3265EEA284D913F00BFA3B5 /* PostListViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3265EEC284D927400BFA3B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3B2095A284D50BF003A41C1 /* PostListViewController.swift */,
+				F3B2095E284D5596003A41C1 /* Posts.storyboard */,
+				F3265EED284D928B00BFA3B5 /* PostListViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3265EF9284D99A200BFA3B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3265EFA284D99C000BFA3B5 /* CoreData */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3265EFA284D99C000BFA3B5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F311F435284DA7BB005D4A62 /* User+CoreDataClass.swift */,
+				F311F436284DA7BB005D4A62 /* User+CoreDataProperties.swift */,
+				F311F431284DA798005D4A62 /* Post+CoreDataClass.swift */,
+				F311F432284DA798005D4A62 /* Post+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F3B20931284D4869003A41C1 = {
 			isa = PBXGroup;
 			children = (
 				F3B2093C284D486A003A41C1 /* zemoga_test */,
 				F3B2093B284D486A003A41C1 /* Products */,
+				0BF96F1A6B1675271353F435 /* Pods */,
+				6AAA23C13C7F19D896A1ACD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +142,69 @@
 		F3B2093C284D486A003A41C1 /* zemoga_test */ = {
 			isa = PBXGroup;
 			children = (
+				F3265EF9284D99A200BFA3B5 /* Models */,
+				F3B20958284D50A4003A41C1 /* Modules */,
+				F3B20954284D4922003A41C1 /* Common */,
 				F3B2093D284D486A003A41C1 /* AppDelegate.swift */,
 				F3B2093F284D486A003A41C1 /* SceneDelegate.swift */,
-				F3B20941284D486A003A41C1 /* ViewController.swift */,
-				F3B20943284D486A003A41C1 /* Main.storyboard */,
 				F3B20949284D486B003A41C1 /* Assets.xcassets */,
 				F3B2094B284D486B003A41C1 /* LaunchScreen.storyboard */,
 				F3B2094E284D486B003A41C1 /* Info.plist */,
 				F3B20946284D486A003A41C1 /* zemoga_test.xcdatamodeld */,
 			);
 			path = zemoga_test;
+			sourceTree = "<group>";
+		};
+		F3B20954284D4922003A41C1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F3B20955284D4927003A41C1 /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3B20955284D4927003A41C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F3B20956284D4A15003A41C1 /* APIService.swift */,
+				F3265F03284D9B5900BFA3B5 /* PostService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F3B20958284D50A4003A41C1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F3B20959284D50AA003A41C1 /* PostList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F3B20959284D50AA003A41C1 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				F3265EEC284D927400BFA3B5 /* View */,
+				F3265EE7284D910C00BFA3B5 /* ViewModel */,
+				F3B20961284D86F5003A41C1 /* Components */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		F3B20961284D86F5003A41C1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F3B20963284D8719003A41C1 /* PostListViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F3B20963284D8719003A41C1 /* PostListViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F3B20964284D873A003A41C1 /* PostListViewCell.xib */,
+				F3B20966284D8744003A41C1 /* PostListViewCell.swift */,
+			);
+			path = PostListViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3B20951284D486B003A41C1 /* Build configuration list for PBXNativeTarget "zemoga_test" */;
 			buildPhases = (
+				B86A9DBBF7E13D7FD1F8D1A4 /* [CP] Check Pods Manifest.lock */,
 				F3B20936284D4869003A41C1 /* Sources */,
 				F3B20937284D4869003A41C1 /* Frameworks */,
 				F3B20938284D4869003A41C1 /* Resources */,
+				83ADAB5F307EEE9002CAAFDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,22 +267,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B2095F284D5596003A41C1 /* Posts.storyboard in Resources */,
 				F3B2094D284D486B003A41C1 /* LaunchScreen.storyboard in Resources */,
+				F3B20965284D873A003A41C1 /* PostListViewCell.xib in Resources */,
 				F3B2094A284D486B003A41C1 /* Assets.xcassets in Resources */,
-				F3B20945284D486A003A41C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83ADAB5F307EEE9002CAAFDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zemoga_test/Pods-zemoga_test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zemoga_test/Pods-zemoga_test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zemoga_test/Pods-zemoga_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B86A9DBBF7E13D7FD1F8D1A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zemoga_test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3B20936284D4869003A41C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B20942284D486A003A41C1 /* ViewController.swift in Sources */,
+				F3265EE9284D913000BFA3B5 /* PostListViewModel.swift in Sources */,
+				F3B20957284D4A15003A41C1 /* APIService.swift in Sources */,
+				F3265EEB284D913F00BFA3B5 /* PostListViewModelProtocol.swift in Sources */,
+				F311F437284DA7BB005D4A62 /* User+CoreDataClass.swift in Sources */,
+				F3265EEE284D928B00BFA3B5 /* PostListViewControllerProtocol.swift in Sources */,
+				F311F433284DA798005D4A62 /* Post+CoreDataClass.swift in Sources */,
+				F311F434284DA798005D4A62 /* Post+CoreDataProperties.swift in Sources */,
 				F3B2093E284D486A003A41C1 /* AppDelegate.swift in Sources */,
 				F3B20948284D486A003A41C1 /* zemoga_test.xcdatamodeld in Sources */,
+				F3B2095B284D50BF003A41C1 /* PostListViewController.swift in Sources */,
+				F311F438284DA7BB005D4A62 /* User+CoreDataProperties.swift in Sources */,
+				F3265F04284D9B5900BFA3B5 /* PostService.swift in Sources */,
+				F3B20967284D8744003A41C1 /* PostListViewCell.swift in Sources */,
 				F3B20940284D486A003A41C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +343,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F3B20943284D486A003A41C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3B20944284D486A003A41C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F3B2094B284D486B003A41C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +470,7 @@
 		};
 		F3B20952284D486B003A41C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1705F84692D211A9149D898 /* Pods-zemoga_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,9 +479,11 @@
 				DEVELOPMENT_TEAM = VVFB76GLF8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zemoga_test/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zemoga Mobile Test";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Posts;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,6 +501,7 @@
 		};
 		F3B20953284D486B003A41C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85BEFF7A3C788B5930CCA12 /* Pods-zemoga_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,9 +510,11 @@
 				DEVELOPMENT_TEAM = VVFB76GLF8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zemoga_test/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zemoga Mobile Test";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Posts;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
