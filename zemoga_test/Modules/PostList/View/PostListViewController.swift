@@ -25,12 +25,15 @@ class PostListViewController: UIViewController, PostListViewControllerProtocol {
         loadPosts()
         self.title = "Posts"
         self.navigationController?.navigationBar.backgroundColor = .green
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().isTranslucent = false
-        
+        let navigationTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = .green
+            appearance.titleTextAttributes = navigationTextAttributes
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
+        self.navigationController?.navigationBar.tintColor = .darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = navigationTextAttributes
     }
     
     override func viewWillAppear(_ animated: Bool) {
