@@ -10,6 +10,8 @@ import CoreData
 import SwiftyJSON
 
 class PostService {
+    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     func getPosts(completion: @escaping ([Post], Error?) -> ()) {
         APIService.request(url: "https://jsonplaceholder.typicode.com/posts", method: .get, completion: {(response, error)  in
             guard
@@ -49,8 +51,21 @@ class PostService {
         })
     }
     
+    func removePost(_ postId: Int, completion: @escaping (Int?, Error?) -> ()) {
+        APIService.request(url: "https://jsonplaceholder.typicode.com/posts/\(postId)", method: .delete, completion: {(response, error)  in
+
+            guard
+                error == nil
+            else {
+                completion(nil, error)
+                return
+            }
+            
+            completion(postId, nil)
+        })
+    }
+    
     private func buildPostFromDictionary(_ dictionary: [String: Any]) -> Post? {
-        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         let json = JSON(dictionary)
         var post: Post?
@@ -107,8 +122,6 @@ class PostService {
     }
     
     private func buildCommentFromDictionary(_ dictionary: [String: Any]) -> Comment? {
-        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
         let json = JSON(dictionary)
         var comment: Comment?
 

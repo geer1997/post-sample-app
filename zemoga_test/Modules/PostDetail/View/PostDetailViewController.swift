@@ -23,12 +23,15 @@ class PostDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         guard let post = post else { return }
+        self.title = "Post"
         self.descriptionUILabel?.text = post.body
     }
     
     override func viewDidLoad() {
         viewModel.delegate = self
         setupCommentsTable()
+        guard let post = post else {return}
+        setFavoriteButton(post.isFavorite)
     }
     
     func preparePostDetail(post: Post) {
@@ -49,6 +52,18 @@ class PostDetailViewController: UIViewController {
         commentsTableView.delegate = self
         commentsTableView.dataSource = self
         commentsTableView.registerCells()
+    }
+    
+    @objc private func setFavorites() {
+        guard let post = post else {return}
+        post.isFavorite = !post.isFavorite
+
+        setFavoriteButton(post.isFavorite)
+    }
+    
+    private func setFavoriteButton(_ isFavorite: Bool) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: isFavorite ? "star.fill" : "star"), style: .plain, target: self, action: #selector(setFavorites))
+        navigationItem.rightBarButtonItem?.tintColor = .darkGray
     }
     
 }

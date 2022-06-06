@@ -12,8 +12,14 @@ class PostListViewCell: UITableViewCell {
     static let identifier: String = "post_cell"
     
     @IBOutlet weak var postDescriptionLabel: UILabel!
+    @IBOutlet weak var postIconStatus: UIImageView!
     
-    func preparePostListCell(_ postDescription: String) {
-        postDescriptionLabel?.text = postDescription
+    var post: Post?
+    
+    func preparePostListCell(_ post: Post) {
+        self.post = post
+        postDescriptionLabel?.text = post.body
+        postIconStatus.image = UIImage(systemName: "star.fill")
+        postIconStatus.isHidden = !post.isFavorite
     }
 }

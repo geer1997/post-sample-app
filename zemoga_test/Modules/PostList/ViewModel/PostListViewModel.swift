@@ -19,8 +19,14 @@ class PostListViewModel: PostListViewModelProtocol {
     
     func removeAllPosts() {
         PostService().deleteAllPosts(completion: { (response, error) in
-            print("===> deleted", response)
             self.delegate?.finishRemovingPosts(error: error)
+        })
+    }
+    
+    func removePost(_ postId: Int) {
+        PostService().removePost(postId, completion: { (response, error) in
+            guard let postIdReponse = response else { return }
+            self.delegate?.finishRemovingPost(postIdReponse, error: error)
         })
     }
 }

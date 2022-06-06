@@ -20,6 +20,7 @@ extension Post {
     @NSManaged public var id: Int16
     @NSManaged public var title: String?
     @NSManaged public var userId: Int16
+    @NSManaged public var isFavorite: Bool
     @NSManaged public var user: User?
     @NSManaged public var comments: NSOrderedSet?
 

@@ -11,6 +11,7 @@
     <entity name="Post" representedClassName=".Post" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="post" inverseEntity="Comment"/>
@@ -26,8 +27,8 @@
         <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="user" inverseEntity="Post"/>
     </entity>
     <elements>
-        <element name="Post" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Post" positionX="-63" positionY="-18" width="128" height="134"/>
         <element name="User" positionX="-54" positionY="18" width="128" height="134"/>
-        <element name="Comment" positionX="-45" positionY="81" width="128" height="119"/>
+        <element name="Comment" positionX="-36" positionY="45" width="128" height="119"/>
     </elements>
 </model>

@@ -17,19 +17,30 @@
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63K-GW-GvZ">
                     <rect key="frame" x="0.0" y="10" width="414" height="80"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-A9-23V">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-6M-kLC">
                             <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-A9-23V">
+                                    <rect key="frame" x="10" y="25" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="bN8-XJ-Vku"/>
+                                        <constraint firstAttribute="width" constant="30" id="l0f-7H-vR6"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="l0f-7H-vR6"/>
+                                <constraint firstItem="WZs-A9-23V" firstAttribute="centerX" secondItem="RHV-6M-kLC" secondAttribute="centerX" id="3ov-Kx-98e"/>
+                                <constraint firstAttribute="width" constant="50" id="ESS-RW-v75"/>
+                                <constraint firstItem="WZs-A9-23V" firstAttribute="centerY" secondItem="RHV-6M-kLC" secondAttribute="centerY" id="way-0W-nnf"/>
                             </constraints>
-                        </imageView>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRj-cH-vru">
                             <rect key="frame" x="50" y="0.0" width="314" height="80"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label con información">
                                     <attributes>
                                         <font key="NSFont" size="14" name="Avenir-Book"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="20" headIndent="20" defaultTabInterval="20" tighteningFactorForTruncation="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" headIndent="10" defaultTabInterval="20" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
@@ -69,6 +80,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="postDescriptionLabel" destination="IRj-cH-vru" id="9Bv-CQ-azB"/>
+                <outlet property="postIconStatus" destination="WZs-A9-23V" id="L6l-8h-ckA"/>
             </connections>
             <point key="canvasLocation" x="-344.92753623188406" y="391.07142857142856"/>
         </view>

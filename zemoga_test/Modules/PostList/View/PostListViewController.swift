@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class PostListViewController: UIViewController, PostListViewControllerProtocol {
-
+    
     @IBOutlet weak var postListTableView: UITableView!
     
     let refreshControl = UIRefreshControl()
@@ -25,6 +25,19 @@ class PostListViewController: UIViewController, PostListViewControllerProtocol {
         loadPosts()
         self.title = "Posts"
         self.navigationController?.navigationBar.backgroundColor = .green
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let posts = posts else { return }
+        self.posts = sortFavoritesPosts(posts)
+        postListTableView.reloadData()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func setupTableView() {
@@ -38,6 +51,10 @@ class PostListViewController: UIViewController, PostListViewControllerProtocol {
     
     @objc func loadPosts() {
         viewModel.loadPosts()
+    }
+    
+    private func sortFavoritesPosts(_ posts: [Post]) -> [Post] {
+        return posts.sorted { $0.isFavorite && !$1.isFavorite }
     }
     
     @IBAction func deleteAllPosts(_ sender: Any) {
@@ -55,6 +72,12 @@ extension PostListViewController {
     
     func finishRemovingPosts(error: Error?) {
         self.posts = []
+        postListTableView.reloadData()
+    }
+    
+    func finishRemovingPost(_ postId: Int, error: Error?) {
+        guard let postIndex = posts?.firstIndex(where: { $0.id == postId}) else { return }
+        posts?.remove(at: postIndex)
         postListTableView.reloadData()
     }
 }
@@ -75,7 +98,7 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("no cell for this index path")
         }
         
-        cell.preparePostListCell(post.title ?? "")
+        cell.preparePostListCell(post)
 
         cell.layoutIfNeeded()
 
@@ -91,6 +114,17 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
         postDetailController.preparePostDetail(post: post)
         
         self.navigationController?.pushViewController(postDetailController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let post = posts?[indexPath.row] else { return }
+        if (editingStyle == .delete) {
+            viewModel.removePost(Int(post.id))
+        }
     }
 }
 

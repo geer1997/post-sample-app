@@ -12,4 +12,5 @@ protocol PostListViewModelProtocol {
     
     func loadPosts()
     func removeAllPosts()
+    func removePost(_ postId: Int)
 }
